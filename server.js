@@ -59,6 +59,10 @@ app.get('/bad', (req, res) => {
   res.send({errorMessage: 'This is an bad request'});
 });
 
+app.get('/project', (req, res) => {
+  res.render('project.hbs', {pageTitle: 'Project page'})
+});
+
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
